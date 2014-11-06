@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Diplomado Webmaster URBE</title>
+</head>
+
+
+<style type="text/css">
+</style>
+
+<h1>Actividad 3 - Desarrolle un script con JavaScript para ejemplificar lo siguiente</h1>
+
+<h3>1.- Auto llamado a un método (función).
+</h3><br>
+<p> Se utilizan para correr alguna rutina sin necesidad de ser disparada por un evento, es decir, corren automaticamente</p>
+
+<script type="text/javascript">
+
+(function mostrarFecha(){
+			var hoy = new Date();
+			var dd = hoy.getDate();
+			var mm = hoy.getMonth()+1; //January is 0!
+			var yyyy = hoy.getFullYear();
+
+			if(dd<10) {
+			    dd="0"+dd
+			} 
+
+			if(mm<10) {
+			    mm="0"+mm
+			} 
+		hoy = dd+"/"+mm+"/"+yyyy+"   @ "+ hoy.getHours() + ":" + hoy.getMinutes() + ":" + hoy.getSeconds();
+		document.write("Maracaibo  " + hoy);
+
+})();
+
+</script>
+
+
+<h3>2.- Recursividad (en Programación): ¿Qué es? y ¿Para qué sirve?.</h3><br>
+
+<script type="text/javascript">
+
+var numero;
+function factorial(num)
+	{
+	    if (num < 0) {
+	        return -1;
+	    }
+	    
+	    else if (num == 0) {
+	        return 1;
+	    }
+	    
+	    else {
+	        return (num * factorial(num - 1));
+	    }
+	}
+
+numero=prompt("Ingrese el numero del cual desea conocer el factorial");
+var result = factorial(numero);
+document.write("El Factorial de " + numero + " es " + result);
+
+</script>
+
+<p>La <strong>recursividad</strong>, es un concepto bastante importante y bien básico de la programación. Sin embargo es bastante difícil de asimilar al principio. Se supone que es algo que se va entendiendo con práctica y tiempo.</p>
+<p>En programación, una función es recursiva cuando se llama a sí misma. A continuación un ejemplo para intentar entender recursividad. </p>
+<p>Uno de los ejemplos más clásicos es el <strong>factorial de un número</strong>. Para cualquier entero positivo N, el factorial de N (que se expresa como N!) es el producto (multiplicación) de todos los enteros menor a él:</p><ul><li>1! = 1</li><li>2! = 1 x 2 = 2</li><li>3! = 1 x 2 x 3 = 6</li><li>4! = 1 x 2 x 3 x 4 = 24</li><li>5! = 1 x 2 x 3 x 4 x 5 = 120</li><li>6! = 1 x 2 x 3 x 4 x 5 x 6 = 720</li></ul><p>Se puede ver que el factorial de cada número incluye el factorial de todos los números anteriores a él. Para cualquier entero N mayor a 1, podemos decir que el factorial de N es igual al factorial del número anterior a N multiplicado por N. La fórmula N! = (N-1)! x N. Vuelve a la lista de factoriales de 1 a 6. <br/> 
+
+
+
+
+
+
+
+</body>
+</html>
